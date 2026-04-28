@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tính biểu phí xe</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 16px;
+      background: #f6f3ee;
+      color: #2f241f;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 24px;
+    }
+
+    .field {
+      margin-bottom: 16px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
+
+    select,
+    input,
+    button {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    .result {
+      margin-top: 20px;
+      padding: 16px;
+      background: #f0e1a6;
+      border-radius: 10px;
+      font-weight: 700;
+    }
+
+    .muted {
+      color: #666;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Tính biểu phí xe</h1>
+
+    <div class="field">
+      <label for="usage">Mục đích sử dụng</label>
+      <select id="usage">
+        <option value="">Chọn mục đích sử dụng</option>
+        <option value="KD">KD</option>
+        <option value="KKD">KKD</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="vehicleType">Loại xe</label>
+      <select id="vehicleType" disabled>
+        <option value="">Chọn loại xe</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="vehicleValue">Giá trị xe</label>
+      <input id="vehicleValue" type="number" placeholder="Ví dụ: 1800000000" />
+    </div>
+
+    <div class="field">
+      <label for="insuredValue">Tiền bảo hiểm</label>
+      <input id="insuredValue" type="number" placeholder="Ví dụ: 1800000000" />
+    </div>
+
+    <div class="field">
+      <button id="calculateButton" type="button">Kiểm tra dữ liệu</button>
+    </div>
+
+    <div id="result" class="result">
+      Chưa tính.
+    </div>
+
+    <p class="muted">
+      Bản này đang là bản khung: chọn mục đích sử dụng, lọc loại xe, kiểm tra dữ liệu nhập.
+    </p>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
